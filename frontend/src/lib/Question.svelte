@@ -1,11 +1,14 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import EditCommentModal from './EditCommentModal.svelte';
 
   export let question;
   export let ratings;
   export let groups;
 
   const dispatch = createEventDispatcher();
+  
+  let showCommentModal = false;
 
   function handleRatingClick(groupId, ratingId) {
     const updatedAnswers = [...question.answers];
@@ -44,6 +47,22 @@
     dispatch('update', updatedQuestion);
   }
 
+  function openCommentModal() {
+    showCommentModal = true;
+  }
+
+  function closeCommentModal() {
+    showCommentModal = false;
+  }
+
+  function handleCommentSave(comment) {
+    const updatedQuestion = {
+      ...question,
+      comment: comment
+    };
+    dispatch('update', updatedQuestion);
+  }
+
 </script>
 
 <div class="question-title">
@@ -56,7 +75,17 @@
       </div>
     </div>
   </div>
+  <button class="comment-btn" on:click={openCommentModal} title="View/Edit comment">
+    <img src="/img/comment.svg" alt="Comment" width="24" height="24" />
+  </button>
 </div>
+
+<EditCommentModal
+  comment={question.comment || ''}
+  open={showCommentModal}
+  on:close={closeCommentModal}
+  on:save={(e) => handleCommentSave(e.detail)}
+/>
 
 
 {#each groups as group}
@@ -160,6 +189,29 @@
   .rate-color:hover {
     border-color: #d7baff;
     border-width: 2px;
+  }
+
+  .comment-btn {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .comment-btn:hover {
+    opacity: 0.8;
+  }
+
+  .comment-btn:focus,
+  .comment-btn:active {
+    outline: none;
   }
 </style>
 
