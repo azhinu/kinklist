@@ -230,6 +230,14 @@
     max-width: 800px;
   }
 
+    @media (max-width: 500px) {
+    .update-question-block {
+      min-width: auto;
+      max-width: 100%;
+    }
+  }
+
+
   .block-name {
     position: relative;
     width: auto;
@@ -261,6 +269,13 @@
     gap: 10px;
     align-items: start;
   }
+
+    @media (max-width: 500px) {
+    .block-edit-content {
+      grid-template-columns: 1fr;
+    }
+  }
+
 
   .groups-edit,
   .questions-edit {

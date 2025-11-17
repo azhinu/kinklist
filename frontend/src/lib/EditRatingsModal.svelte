@@ -178,6 +178,12 @@
     max-width: 600px;
   }
 
+  @media (max-width: 420px) {
+    .update-ratings-block {
+      min-width: 280px;
+    }
+  }
+
   .ratings-edit {
     position: relative;
     width: auto;

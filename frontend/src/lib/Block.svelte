@@ -7,6 +7,13 @@
 
   const dispatch = createEventDispatcher();
   let showEditIcon = false;
+  
+  // Определяем, является ли устройство тач-устройством
+  let isTouchDevice = false;
+  
+  if (typeof window !== 'undefined') {
+    isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
 
   function handleEditClick() {
     dispatch('edit', block);
@@ -14,6 +21,24 @@
 
   function handleDeleteClick() {
     dispatch('delete');
+  }
+  
+  function handleTitleClick(e) {
+    // На тач-устройствах переключаем видимость кнопок
+    if (isTouchDevice) {
+      // Если клик был по области с кнопками, не переключаем
+      if (e.target.closest('.block-title-icons')) {
+        return;
+      }
+      showEditIcon = !showEditIcon;
+    } else {
+      // На устройствах без мышки, если кнопки не видны, игнорируем тап
+      if (!showEditIcon) {
+        e.preventDefault();
+        e.stopPropagation();
+        return;
+      }
+    }
   }
 
   function handleUpdate(questionIndex, updatedQuestion) {
@@ -39,10 +64,12 @@
   <div class="block-title"
     role="button"
     tabindex="0"
-    on:mouseenter={() => showEditIcon = true}
-    on:mouseleave={() => showEditIcon = false}
+    on:mouseenter={() => !isTouchDevice && (showEditIcon = true)}
+    on:mouseleave={() => !isTouchDevice && (showEditIcon = false)}
+    on:click={handleTitleClick}
+    on:keydown={(e) => e.key === 'Enter' && handleTitleClick(e)}
     >
-    <span type="text" class="block-title-text">{block.title}</span>
+    <span class="block-title-text">{block.title}</span>
     {#if showEditIcon}
     <div class="block-title-icons">
       <button class="edit-icon" title="Edit block" on:click={handleEditClick}>
