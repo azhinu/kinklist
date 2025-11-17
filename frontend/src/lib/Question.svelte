@@ -9,6 +9,14 @@
   const dispatch = createEventDispatcher();
   
   let showCommentModal = false;
+  let showCommentIcon = false;
+
+  // Определяем, является ли устройство тач-устройством
+  let isTouchDevice = false;
+  
+  if (typeof window !== 'undefined') {
+    isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
 
   function handleRatingClick(groupId, ratingId) {
     const updatedAnswers = [...question.answers];
@@ -63,9 +71,23 @@
     dispatch('update', updatedQuestion);
   }
 
+  function handleTitleClick(e) {
+    // Если клик был по кнопке комментария, не обрабатываем
+    if (e.target.closest('.comment-btn')) {
+      return;
+    }
+  }
+
 </script>
 
-<div class="question-title">
+<div class="question-title"
+  role="button"
+  tabindex="0"
+  on:mouseenter={() => (showCommentIcon = true)}
+  on:mouseleave={() => (showCommentIcon = false)}
+  on:click={handleTitleClick}
+  on:keydown={(e) => e.key === 'Enter' && handleTitleClick(e)}
+>
   <div class="text-node-html">
     <div class="root rich-text root-0">
       <div class="paragraph-set root-0-paragraph-set-0">
@@ -75,9 +97,11 @@
       </div>
     </div>
   </div>
-  <button class="comment-btn" on:click={openCommentModal} title="View/Edit comment">
-    <img src="/img/comment.svg" alt="Comment" width="24" height="24" />
-  </button>
+  {#if showCommentIcon || (question.comment && question.comment.trim())}
+    <button class="comment-btn" on:click={openCommentModal} title="View/Edit comment">
+      <img src="/img/comment.svg" alt="Comment" width="24" height="24" />
+    </button>
+  {/if}
 </div>
 
 <EditCommentModal
