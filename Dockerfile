@@ -3,12 +3,14 @@
 ########################################
 FROM golang:alpine AS backend-builder
 
+ARG VERSION=dev
+
 WORKDIR /src
 
 COPY . ./
 RUN go mod download
 RUN go test ./...
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /out/kinklist ./cmd
+RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -ldflags "-X main.Version=${VERSION}" -o /out/kinklist ./cmd
 
 ########################################
 # Frontend build stage
