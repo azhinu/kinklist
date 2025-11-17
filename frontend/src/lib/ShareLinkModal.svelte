@@ -78,7 +78,6 @@
     gap: 20px;
     padding: 20px;
     flex-direction: column;
-    min-width: 400px;
     max-width: 600px;
   }
 
