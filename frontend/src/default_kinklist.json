@@ -6,7 +6,7 @@
     { "id": "r_okay", "label": "Okay", "color": "#38b547FF" },
     { "id": "r_maybe", "label": "Maybe", "color": "#b57972FF" },
     { "id": "r_no", "label": "No", "color": "#b5537fFF" },
-    { "id": "r_unchosen", "label": "Not shure", "color": "#B1B2B5FF" }
+    { "id": "r_unchosen", "label": "Not sure", "color": "#B1B2B5FF" }
   ],
   "blocks": [
     {
