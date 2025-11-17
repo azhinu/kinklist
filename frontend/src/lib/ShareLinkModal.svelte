@@ -1,11 +1,30 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { onDestroy } from 'svelte';
 
   export let open = false;
   export let link = '';
 
   const dispatch = createEventDispatcher();
   let isClicked = false;
+
+  function handleEscape(e) {
+    if (e.key === 'Escape' && open) {
+      handleClose();
+    }
+  }
+
+  $: if (typeof window !== 'undefined' && open) {
+    window.addEventListener('keydown', handleEscape);
+  } else if (typeof window !== 'undefined') {
+    window.removeEventListener('keydown', handleEscape);
+  }
+
+  onDestroy(() => {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleEscape);
+    }
+  });
 
   function handleClose() {
     dispatch('close');

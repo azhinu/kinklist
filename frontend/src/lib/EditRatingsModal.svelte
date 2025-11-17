@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { onDestroy } from 'svelte';
 
   export let ratings = [];
   export let open = false;
@@ -7,6 +8,24 @@
   const dispatch = createEventDispatcher();
   
   let editedRatings = [];
+
+  function handleEscape(e) {
+    if (e.key === 'Escape' && open) {
+      handleClose();
+    }
+  }
+
+  $: if (typeof window !== 'undefined' && open) {
+    window.addEventListener('keydown', handleEscape);
+  } else if (typeof window !== 'undefined') {
+    window.removeEventListener('keydown', handleEscape);
+  }
+
+  onDestroy(() => {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleEscape);
+    }
+  });
 
   // Normalize color format: remove alpha channel if present (e.g., #5354b6FF -> #5354b6)
   function normalizeColor(color) {

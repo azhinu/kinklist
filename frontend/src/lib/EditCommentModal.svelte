@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  import { onDestroy } from 'svelte';
 
   export let comment = '';
   export let open = false;
@@ -7,6 +8,24 @@
   const dispatch = createEventDispatcher();
   
   let editedComment = '';
+
+  function handleEscape(e) {
+    if (e.key === 'Escape' && open) {
+      handleClose();
+    }
+  }
+
+  $: if (typeof window !== 'undefined' && open) {
+    window.addEventListener('keydown', handleEscape);
+  } else if (typeof window !== 'undefined') {
+    window.removeEventListener('keydown', handleEscape);
+  }
+
+  onDestroy(() => {
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('keydown', handleEscape);
+    }
+  });
 
   $: if (open) {
     editedComment = comment || '';
