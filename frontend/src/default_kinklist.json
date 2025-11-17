@@ -1,0 +1,302 @@
+{
+  "nickname": "",
+  "ratings": [
+    { "id": "r_favorite", "label": "Favorite", "color": "#5354b6FF" },
+    { "id": "r_like", "label": "Like", "color": "#38b5aaFF" },
+    { "id": "r_okay", "label": "Okay", "color": "#38b547FF" },
+    { "id": "r_maybe", "label": "Maybe", "color": "#b57972FF" },
+    { "id": "r_no", "label": "No", "color": "#b5537fFF" },
+    { "id": "r_unchosen", "label": "Not shure", "color": "#B1B2B5FF" }
+  ],
+  "blocks": [
+    {
+      "id": "b_bodies",
+      "title": "Bodies",
+      "comment": "",
+      "groups": [
+        { "id": "g_bodies_self", "label": "Self" },
+        { "id": "g_bodies_partner", "label": "Partner" }
+      ],
+      "questions": [
+        { "id": "q_bodies_skinny", "title": "Skinny", "comment": "", "answers": [] },
+        { "id": "q_bodies_chubby", "title": "Chubby", "comment": "", "answers": [] },
+        { "id": "q_bodies_small_breasts", "title": "Small breasts", "comment": "", "answers": [] },
+        { "id": "q_bodies_large_breasts", "title": "Large breasts", "comment": "", "answers": [] },
+        { "id": "q_bodies_small_cocks", "title": "Small cocks", "comment": "", "answers": [] },
+        { "id": "q_bodies_large_cocks", "title": "Large cocks", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_clothing",
+      "title": "Clothing",
+      "comment": "",
+      "groups": [
+        { "id": "g_clothing_self", "label": "Self" },
+        { "id": "g_clothing_partner", "label": "Partner" }
+      ],
+      "questions": [
+        { "id": "q_clothing_clothed_sex", "title": "Clothed sex", "comment": "", "answers": [] },
+        { "id": "q_clothing_lingerie", "title": "Lingerie", "comment": "", "answers": [] },
+        { "id": "q_clothing_stockings", "title": "Stockings", "comment": "", "answers": [] },
+        { "id": "q_clothing_heels", "title": "Heels", "comment": "", "answers": [] },
+        { "id": "q_clothing_leather", "title": "Leather", "comment": "", "answers": [] },
+        { "id": "q_clothing_latex", "title": "Latex", "comment": "", "answers": [] },
+        { "id": "q_clothing_uniform_costume", "title": "Uniform / costume", "comment": "", "answers": [] },
+        { "id": "q_clothing_cross_dressing", "title": "Cross-dressing", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_groupings",
+      "title": "Groupings",
+      "comment": "",
+      "groups": [
+        { "id": "g_groupings_general", "label": "General" }
+      ],
+      "questions": [
+        { "id": "q_groupings_you_1_male", "title": "You and 1 male", "comment": "", "answers": [] },
+        { "id": "q_groupings_you_1_female", "title": "You and 1 female", "comment": "", "answers": [] },
+        { "id": "q_groupings_you_trans_female", "title": "You and trans female", "comment": "", "answers": [] },
+        { "id": "q_groupings_you_trans_male", "title": "You and trans male", "comment": "", "answers": [] },
+        { "id": "q_groupings_you_1_male_1_female", "title": "You and 1 male, 1 female", "comment": "", "answers": [] },
+        { "id": "q_groupings_you_2_males", "title": "You and 2 males", "comment": "", "answers": [] },
+        { "id": "q_groupings_you_2_females", "title": "You and 2 females", "comment": "", "answers": [] },
+        { "id": "q_groupings_orgy", "title": "Orgy", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_general",
+      "title": "General",
+      "comment": "",
+      "groups": [
+        { "id": "g_general_giving", "label": "Giving" },
+        { "id": "g_general_receiving", "label": "Receiving" }
+      ],
+      "questions": [
+        { "id": "q_general_romance_affection", "title": "Romance / Affection", "comment": "", "answers": [] },
+        { "id": "q_general_handjob_fingering", "title": "Handjob / fingering", "comment": "", "answers": [] },
+        { "id": "q_general_blowjob", "title": "Blowjob", "comment": "", "answers": [] },
+        { "id": "q_general_deep_throat", "title": "Deep throat", "comment": "", "answers": [] },
+        { "id": "q_general_swallowing", "title": "Swallowing", "comment": "", "answers": [] },
+        { "id": "q_general_facials", "title": "Facials", "comment": "", "answers": [] },
+        { "id": "q_general_cunnilingus", "title": "Cunnilingus", "comment": "", "answers": [] },
+        { "id": "q_general_face_sitting", "title": "Face-sitting", "comment": "", "answers": [] },
+        { "id": "q_general_edging", "title": "Edging", "comment": "", "answers": [] },
+        { "id": "q_general_teasing", "title": "Teasing", "comment": "", "answers": [] },
+        { "id": "q_general_joi_si", "title": "JOI, SI", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_ass_play",
+      "title": "Ass play",
+      "comment": "",
+      "groups": [
+        { "id": "g_ass_play_giving", "label": "Giving" },
+        { "id": "g_ass_play_receiving", "label": "Receiving" }
+      ],
+      "questions": [
+        { "id": "q_ass_play_anal_toys", "title": "Anal toys", "comment": "", "answers": [] },
+        { "id": "q_ass_play_anal_sex_pegging", "title": "Anal sex, pegging", "comment": "", "answers": [] },
+        { "id": "q_ass_play_rimming", "title": "Rimming", "comment": "", "answers": [] },
+        { "id": "q_ass_play_double_penetration", "title": "Double penetration", "comment": "", "answers": [] },
+        { "id": "q_ass_play_anal_fisting", "title": "Anal fisting", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_restrictive",
+      "title": "Restrictive",
+      "comment": "",
+      "groups": [
+        { "id": "g_restrictive_self", "label": "Self" },
+        { "id": "g_restrictive_partner", "label": "Partner" }
+      ],
+      "questions": [
+        { "id": "q_restrictive_gag", "title": "Gag", "comment": "", "answers": [] },
+        { "id": "q_restrictive_collar", "title": "Collar", "comment": "", "answers": [] },
+        { "id": "q_restrictive_leash", "title": "Leash", "comment": "", "answers": [] },
+        { "id": "q_restrictive_chastity", "title": "Chastity", "comment": "", "answers": [] },
+        { "id": "q_restrictive_bondage_light", "title": "Bondage (Light)", "comment": "", "answers": [] },
+        { "id": "q_restrictive_bondage_heavy", "title": "Bondage (Heavy)", "comment": "", "answers": [] },
+        { "id": "q_restrictive_encasement", "title": "Encasement", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_toys",
+      "title": "Toys",
+      "comment": "",
+      "groups": [
+        { "id": "g_toys_self", "label": "Self" },
+        { "id": "g_toys_partner", "label": "Partner" }
+      ],
+      "questions": [
+        { "id": "q_toys_dildos", "title": "Dildos", "comment": "", "answers": [] },
+        { "id": "q_toys_plugs", "title": "Plugs", "comment": "", "answers": [] },
+        { "id": "q_toys_vibrators", "title": "Vibrators", "comment": "", "answers": [] },
+        { "id": "q_toys_sounding", "title": "Sounding", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_domination",
+      "title": "Domination",
+      "comment": "",
+      "groups": [
+        { "id": "g_domination_dominant", "label": "Dominant" },
+        { "id": "g_domination_submissive", "label": "Submissive" }
+      ],
+      "questions": [
+        { "id": "q_domination_ds", "title": "Dominant / Submissive", "comment": "", "answers": [] },
+        { "id": "q_domination_domestic_servitude", "title": "Domestic servitude", "comment": "", "answers": [] },
+        { "id": "q_domination_slavery", "title": "Slavery", "comment": "", "answers": [] },
+        { "id": "q_domination_pet_play", "title": "Pet play", "comment": "", "answers": [] },
+        { "id": "q_domination_ddlg_mdlb", "title": "DD/lg, MD/lb", "comment": "", "answers": [] },
+        { "id": "q_domination_discipline", "title": "Discipline", "comment": "", "answers": [] },
+        { "id": "q_domination_begging", "title": "Begging", "comment": "", "answers": [] },
+        { "id": "q_domination_forced_orgasm", "title": "Forced orgasm", "comment": "", "answers": [] },
+        { "id": "q_domination_orgasm_control", "title": "Orgasm control", "comment": "", "answers": [] },
+        { "id": "q_domination_orgasm_denial", "title": "Orgasm denial", "comment": "", "answers": [] },
+        { "id": "q_domination_power_exchange", "title": "Power exchange", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_no_consent",
+      "title": "No consent",
+      "comment": "",
+      "groups": [
+        { "id": "g_noconsent_aggressor", "label": "Aggressor" },
+        { "id": "g_noconsent_target", "label": "Target" }
+      ],
+      "questions": [
+        { "id": "q_noconsent_noncon", "title": "Non-con / rape", "comment": "", "answers": [] },
+        { "id": "q_noconsent_blackmail", "title": "Blackmail / coercion", "comment": "", "answers": [] },
+        { "id": "q_noconsent_kidnapping", "title": "Kidnapping", "comment": "", "answers": [] },
+        { "id": "q_noconsent_drugs", "title": "Drugs", "comment": "", "answers": [] },
+        { "id": "q_noconsent_alcohol", "title": "Alcohol", "comment": "", "answers": [] },
+        { "id": "q_noconsent_sleep_play", "title": "Sleep play", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_taboo",
+      "title": "Taboo",
+      "comment": "",
+      "groups": [
+        { "id": "g_taboo_general", "label": "General" }
+      ],
+      "questions": [
+        { "id": "q_taboo_incest", "title": "Incest", "comment": "", "answers": [] },
+        { "id": "q_taboo_age_gap", "title": "Age gap", "comment": "", "answers": [] },
+        { "id": "q_taboo_raceplay", "title": "Raceplay", "comment": "", "answers": [] },
+        { "id": "q_taboo_bestiality", "title": "Bestiality", "comment": "", "answers": [] },
+        { "id": "q_taboo_necrophilia", "title": "Necrophilia", "comment": "", "answers": [] },
+        { "id": "q_taboo_cheating", "title": "Cheating", "comment": "", "answers": [] },
+        { "id": "q_taboo_exhibitionism", "title": "Exhibitionism", "comment": "", "answers": [] },
+        { "id": "q_taboo_voyeurism", "title": "Voyeurism", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_surrealism",
+      "title": "Surrealism",
+      "comment": "",
+      "groups": [
+        { "id": "g_surrealism_self", "label": "Self" },
+        { "id": "g_surrealism_partner", "label": "Partner" }
+      ],
+      "questions": [
+        { "id": "q_surrealism_futanari", "title": "Futanari", "comment": "", "answers": [] },
+        { "id": "q_surrealism_furry", "title": "Furry", "comment": "", "answers": [] },
+        { "id": "q_surrealism_vore", "title": "Vore", "comment": "", "answers": [] },
+        { "id": "q_surrealism_transformation", "title": "Transformation", "comment": "", "answers": [] },
+        { "id": "q_surrealism_tentacles", "title": "Tentacles", "comment": "", "answers": [] },
+        { "id": "q_surrealism_monster_alien", "title": "Monster or Alien", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_fluids",
+      "title": "Fluids",
+      "comment": "",
+      "groups": [
+        { "id": "g_fluids_general", "label": "General" }
+      ],
+      "questions": [
+        { "id": "q_fluids_blood", "title": "Blood", "comment": "", "answers": [] },
+        { "id": "q_fluids_watersports", "title": "Watersports", "comment": "", "answers": [] },
+        { "id": "q_fluids_scat", "title": "Scat", "comment": "", "answers": [] },
+        { "id": "q_fluids_lactation", "title": "Lactation", "comment": "", "answers": [] },
+        { "id": "q_fluids_diapers", "title": "Diapers", "comment": "", "answers": [] },
+        { "id": "q_fluids_cum_play", "title": "Cum play", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_degradation",
+      "title": "Degradation",
+      "comment": "",
+      "groups": [
+        { "id": "g_degradation_giving", "label": "Giving" },
+        { "id": "g_degradation_receiving", "label": "Receiving" }
+      ],
+      "questions": [
+        { "id": "q_degradation_glory_hole", "title": "Glory hole", "comment": "", "answers": [] },
+        { "id": "q_degradation_name_calling", "title": "Name calling", "comment": "", "answers": [] },
+        { "id": "q_degradation_humiliation", "title": "Humiliation", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_touch_stimulation",
+      "title": "Touch & Stimulation",
+      "comment": "",
+      "groups": [
+        { "id": "g_touch_actor", "label": "Actor" },
+        { "id": "g_touch_subject", "label": "Subject" }
+      ],
+      "questions": [
+        { "id": "q_touch_cock_pussy_worship", "title": "Cock/Pussy worship", "comment": "", "answers": [] },
+        { "id": "q_touch_ass_worship", "title": "Ass worship", "comment": "", "answers": [] },
+        { "id": "q_touch_foot_play", "title": "Foot play", "comment": "", "answers": [] },
+        { "id": "q_touch_tickling", "title": "Tickling", "comment": "", "answers": [] },
+        { "id": "q_touch_sensation_play", "title": "Sensation play", "comment": "", "answers": [] },
+        { "id": "q_touch_electro_stimulation", "title": "Electro stimulation", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_misc_fetish",
+      "title": "Misc. Fetish",
+      "comment": "",
+      "groups": [
+        { "id": "g_misc_giving", "label": "Giving" },
+        { "id": "g_misc_receiving", "label": "Receiving" }
+      ],
+      "questions": [
+        { "id": "q_misc_fisting", "title": "Fisting", "comment": "", "answers": [] },
+        { "id": "q_misc_gangbang", "title": "Gangbang", "comment": "", "answers": [] },
+        { "id": "q_misc_breath_play", "title": "Breath play", "comment": "", "answers": [] },
+        { "id": "q_misc_impregnation", "title": "Impregnation", "comment": "", "answers": [] },
+        { "id": "q_misc_pregnancy", "title": "Pregnancy", "comment": "", "answers": [] },
+        { "id": "q_misc_feminization", "title": "Feminization", "comment": "", "answers": [] },
+        { "id": "q_misc_cuckold", "title": "Cuckold / Cuckquean", "comment": "", "answers": [] }
+      ]
+    },
+    {
+      "id": "b_pain",
+      "title": "Pain",
+      "comment": "",
+      "groups": [
+        { "id": "g_pain_giving", "label": "Giving" },
+        { "id": "g_pain_receiving", "label": "Receiving" }
+      ],
+      "questions": [
+        { "id": "q_pain_light_pain", "title": "Light pain", "comment": "", "answers": [] },
+        { "id": "q_pain_heavy_pain", "title": "Heavy pain", "comment": "", "answers": [] },
+        { "id": "q_pain_nipple_clamps", "title": "Nipple clamps", "comment": "", "answers": [] },
+        { "id": "q_pain_clothes_pins", "title": "Clothes pins", "comment": "", "answers": [] },
+        { "id": "q_pain_caning", "title": "Caning", "comment": "", "answers": [] },
+        { "id": "q_pain_flogging", "title": "Flogging", "comment": "", "answers": [] },
+        { "id": "q_pain_beating", "title": "Beating", "comment": "", "answers": [] },
+        { "id": "q_pain_spanking", "title": "Spanking", "comment": "", "answers": [] },
+        { "id": "q_pain_cock_pussy_slapping", "title": "Cock/Pussy slapping", "comment": "", "answers": [] },
+        { "id": "q_pain_cock_pussy_torture", "title": "Cock/Pussy torture", "comment": "", "answers": [] },
+        { "id": "q_pain_hot_wax", "title": "Hot Wax", "comment": "", "answers": [] },
+        { "id": "q_pain_scratching", "title": "Scratching", "comment": "", "answers": [] },
+        { "id": "q_pain_biting", "title": "Biting", "comment": "", "answers": [] },
+        { "id": "q_pain_cutting", "title": "Cutting", "comment": "", "answers": [] }
+      ]
+    }
+  ]
+}

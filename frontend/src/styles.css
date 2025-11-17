@@ -1,0 +1,345 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif;
+  color: rgba(151, 156, 173, 1);
+  font-size: 16px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: 'Raleway', sans-serif;
+  color: rgba(151, 156, 173, 1);
+  font-size: 16px;
+  cursor: default;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+/* Main container */
+.main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1b1c22;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: start;
+  align-content: stretch;
+  justify-content: start;
+  padding: 0px 50px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  z-index: 0;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 50px 10px;
+  background: #1b1c22;
+  z-index: 1000;
+}
+
+.header-left,
+.header-right {
+  position: static;
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 0;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+}
+
+
+.logo-svg {
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.logo-svg:hover {
+  opacity: 0.8;
+}
+
+.kinklist-title {
+  width: 125px;
+  height: 50px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  color: rgba(151, 156, 173, 1);
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.kinklist-title:hover {
+  opacity: 0.8;
+}
+
+.name-field {
+  position: relative;
+  width: 183px;
+  height: 50px;
+  background: #373b4d;
+  border-radius: 25px;
+  flex-shrink: 0;
+}
+
+/* Blocks container */
+.blocks-container {
+  position: relative;
+  width: 100%;
+  padding: 15px 0;
+  
+  column-width: 290px;
+  column-gap: 10px;
+}
+
+/* Block */
+.block {
+  position: relative;
+  width: 100%;
+  background: #2c2e38;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 10px;
+  break-inside: avoid;
+}
+
+.block-title {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr auto;
+  min-height: 24px;
+  margin-bottom: 10px;
+}
+
+.block-title-icons {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.edit-icon,.remove-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+
+
+/* Question container */
+.question-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  align-content: stretch;
+  justify-content: start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100px;
+  min-width: 215px;
+  width: 100%;
+}
+
+.question-title {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Rates container */
+.rates-container {
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  justify-content: flex-end;
+  padding: 5px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  min-height: 40px;
+  min-width: 215px;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* Group box */
+.group-box {
+  position: relative;
+  background: #7a80a2;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: stretch;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 10px;
+  margin-right: 10px;
+}
+
+.group-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: rgba(68, 71, 79, 1);
+}
+
+/* Rates */
+.rates {
+  position: relative;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: start;
+  align-content: stretch;
+  justify-content: center;
+  gap: 5px;
+  padding: 0 5px;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  min-height: 24px;
+  min-width: 131px;
+}
+
+.rate-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.rate-color.selected {
+  border-color: #d7baff;
+  border-width: 2px;
+}
+
+.rate-color:hover {
+  border-color: #d7baff;
+  border-width: 2px;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    min-height: auto;
+    padding-inline: 20px;
+    position: relative;
+  }
+
+  .header-left,
+  .header-right {
+    position: static;
+    height: auto;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+  }
+
+    .header-right {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rating-board {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .save-button {
+    width: 100%;
+  }
+
+  .kinklist-title {
+    display: none;
+  }
+
+  .logo-svg {
+    flex-shrink: 0;
+  }
+
+  .name-field {
+    flex: 1 1 140px;
+  }
+}

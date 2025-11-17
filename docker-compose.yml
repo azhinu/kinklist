@@ -1,0 +1,8 @@
+services:
+  kinklist:
+    image: ghcr.io/azhinu/kinklist:latest
+    ports:
+      - 8080:8080
+    volumes:
+      - ./kinklist-data:/data
+    restart: unless-stopped
