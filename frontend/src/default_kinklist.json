@@ -235,7 +235,8 @@
       "questions": [
         { "id": "q_degradation_glory_hole", "title": "Glory hole", "comment": "", "answers": [] },
         { "id": "q_degradation_name_calling", "title": "Name calling", "comment": "", "answers": [] },
-        { "id": "q_degradation_humiliation", "title": "Humiliation", "comment": "", "answers": [] }
+        { "id": "q_degradation_humiliation", "title": "Humiliation", "comment": "", "answers": [] },
+        { "id": "q_degradation_trampling", "title": "Trampling", "comment": "", "answers": [] }
       ]
     },
     {
@@ -252,7 +253,10 @@
         { "id": "q_touch_foot_play", "title": "Foot play", "comment": "", "answers": [] },
         { "id": "q_touch_tickling", "title": "Tickling", "comment": "", "answers": [] },
         { "id": "q_touch_sensation_play", "title": "Sensation play", "comment": "", "answers": [] },
-        { "id": "q_touch_electro_stimulation", "title": "Electro stimulation", "comment": "", "answers": [] }
+        { "id": "q_touch_electro_stimulation", "title": "Electro stimulation", "comment": "", "answers": [] },
+        { "id": "q_misc_fireplay", "title": "Fire play", "comment": "", "answers": [] },
+        { "id": "q_misc_kniferoplay", "title": "Knife play (without cutting)", "comment": "", "answers": [] }
+
       ]
     },
     {
@@ -295,7 +299,8 @@
         { "id": "q_pain_hot_wax", "title": "Hot Wax", "comment": "", "answers": [] },
         { "id": "q_pain_scratching", "title": "Scratching", "comment": "", "answers": [] },
         { "id": "q_pain_biting", "title": "Biting", "comment": "", "answers": [] },
-        { "id": "q_pain_cutting", "title": "Cutting", "comment": "", "answers": [] }
+        { "id": "q_pain_cutting", "title": "Cutting", "comment": "", "answers": [] },
+        { "id": "q_pain_needles", "title": "Needles", "comment": "", "answers": [] }
       ]
     }
   ]
