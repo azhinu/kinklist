@@ -13,6 +13,10 @@
   
   if (typeof window !== 'undefined') {
     isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    // На тач-устройствах иконки всегда видимы
+    if (isTouchDevice) {
+      showEditIcon = true;
+    }
   }
 
   function handleEditClick() {
@@ -24,13 +28,9 @@
   }
   
   function handleTitleClick(e) {
-    // На тач-устройствах переключаем видимость кнопок
+    // На тач-устройствах иконки всегда видимы, ничего не делаем
     if (isTouchDevice) {
-      // Если клик был по области с кнопками, не переключаем
-      if (e.target.closest('.block-title-icons')) {
-        return;
-      }
-      showEditIcon = !showEditIcon;
+      return;
     } else {
       // На устройствах без мышки, если кнопки не видны, игнорируем тап
       if (!showEditIcon) {

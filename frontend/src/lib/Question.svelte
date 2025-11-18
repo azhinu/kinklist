@@ -10,12 +10,36 @@
   
   let showCommentModal = false;
   let showCommentIcon = false;
+  let showCommentTooltip = false;
+  let tooltipPosition = { top: 0, right: 0 };
+  let commentBtnElement;
 
   // Определяем, является ли устройство тач-устройством
   let isTouchDevice = false;
   
   if (typeof window !== 'undefined') {
     isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    // На тач-устройствах иконка комментария всегда видима
+    if (isTouchDevice) {
+      showCommentIcon = true;
+    }
+  }
+
+  function updateTooltipPosition() {
+    if (commentBtnElement && typeof window !== 'undefined') {
+      const rect = commentBtnElement.getBoundingClientRect();
+      tooltipPosition = {
+        top: rect.top,
+        right: window.innerWidth - rect.right
+      };
+    }
+  }
+
+  function handleCommentBtnMouseEnter() {
+    if (!isTouchDevice && question.comment && question.comment.trim()) {
+      updateTooltipPosition();
+      showCommentTooltip = true;
+    }
   }
 
   function handleRatingClick(groupId, ratingId) {
@@ -83,8 +107,8 @@
 <div class="question-title"
   role="button"
   tabindex="0"
-  on:mouseenter={() => (showCommentIcon = true)}
-  on:mouseleave={() => (showCommentIcon = false)}
+  on:mouseenter={() => !isTouchDevice && (showCommentIcon = true)}
+  on:mouseleave={() => !isTouchDevice && (showCommentIcon = false)}
   on:click={handleTitleClick}
   on:keydown={(e) => e.key === 'Enter' && handleTitleClick(e)}
 >
@@ -98,9 +122,19 @@
     </div>
   </div>
   {#if showCommentIcon || (question.comment && question.comment.trim())}
-    <button class="comment-btn" on:click={openCommentModal} title="View/Edit comment">
-      <img src="/img/comment.svg" alt="Comment" width="24" height="24" />
-    </button>
+    {@const hasComment = question.comment && question.comment.trim()}
+    <div class="comment-btn-wrapper">
+      <button 
+        class="comment-btn" 
+        bind:this={commentBtnElement}
+        on:click={openCommentModal} 
+        on:mouseenter={handleCommentBtnMouseEnter}
+        on:mouseleave={() => !isTouchDevice && (showCommentTooltip = false)}
+        title="View/Edit comment"
+      >
+        <img src={hasComment ? "/img/comment_active.svg" : "/img/comment.svg"} alt="Comment" width="24" height="24" />
+      </button>
+    </div>
   {/if}
 </div>
 
@@ -110,6 +144,19 @@
   on:close={closeCommentModal}
   on:save={(e) => handleCommentSave(e.detail)}
 />
+
+{#if showCommentTooltip && question.comment && question.comment.trim()}
+  <div 
+    class="comment-tooltip" 
+    style="top: {tooltipPosition.top}px; right: {tooltipPosition.right}px;"
+    on:mouseenter={() => !isTouchDevice && (showCommentTooltip = true)}
+    on:mouseleave={() => !isTouchDevice && (showCommentTooltip = false)}
+  >
+    <div class="comment-tooltip-content">
+      {question.comment}
+    </div>
+  </div>
+{/if}
 
 
 {#each groups as group}
@@ -215,6 +262,14 @@
     border-width: 2px;
   }
 
+  .comment-btn-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
   .comment-btn {
     position: relative;
     width: 24px;
@@ -227,6 +282,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
   }
 
   .comment-btn:hover {
@@ -236,6 +292,57 @@
   .comment-btn:focus,
   .comment-btn:active {
     outline: none;
+  }
+
+  .comment-tooltip {
+    position: fixed;
+    z-index: 99999;
+    pointer-events: auto;
+    isolation: isolate;
+    transform: translateY(calc(-100% - 8px));
+  }
+
+  .comment-tooltip-content {
+    background: #2c2e38;
+    border: 1px solid #7a80a2;
+    border-radius: 8px;
+    padding: 12px;
+    max-width: 300px;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    color: rgba(151, 156, 173, 1);
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    position: relative;
+    z-index: 99999;
+  }
+
+  .comment-tooltip-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #2c2e38;
+  }
+
+  .comment-tooltip-content::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid #7a80a2;
+    z-index: -1;
   }
 </style>
 

@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from 'svelte';
-  import { onDestroy } from 'svelte';
+  import { onDestroy, tick } from 'svelte';
 
   export let comment = '';
   export let open = false;
@@ -8,27 +8,37 @@
   const dispatch = createEventDispatcher();
   
   let editedComment = '';
+  let textareaElement;
 
   function handleEscape(e) {
     if (e.key === 'Escape' && open) {
+      e.preventDefault();
+      e.stopPropagation();
       handleClose();
     }
   }
 
   $: if (typeof window !== 'undefined' && open) {
-    window.addEventListener('keydown', handleEscape);
+    window.addEventListener('keydown', handleEscape, true);
   } else if (typeof window !== 'undefined') {
-    window.removeEventListener('keydown', handleEscape);
+    window.removeEventListener('keydown', handleEscape, true);
   }
 
   onDestroy(() => {
     if (typeof window !== 'undefined') {
-      window.removeEventListener('keydown', handleEscape);
+      window.removeEventListener('keydown', handleEscape, true);
     }
   });
 
   $: if (open) {
     editedComment = comment || '';
+    // Фокусируем текстовое поле при открытии модального окна
+    if (typeof window !== 'undefined') {
+      // Используем tick() для ожидания обновления DOM
+      tick().then(() => {
+        textareaElement?.focus();
+      });
+    }
   }
 
   function handleClose() {
@@ -47,7 +57,13 @@
 
 {#if open}
   <div class="modal-overlay" role="dialog" aria-modal="true" tabindex="-1" on:click={handleClose} on:keydown={(e) => e.key === 'Escape' && handleClose()}>
-    <div class="modal-content" role="document" on:click|stopPropagation on:keydown|stopPropagation>
+    <div class="modal-content" role="document" on:click|stopPropagation on:keydown={(e) => {
+      if (e.key !== 'Escape') {
+        e.stopPropagation();
+      } else {
+        handleClose();
+      }
+    }}>
       <div class="update-comment-block">
         <!-- Comment edit -->
         <div class="comment-edit">
@@ -59,9 +75,11 @@
           <!-- Comment input -->
           <div class="comment-input-container">
             <textarea
+              bind:this={textareaElement}
               class="comment-text"
               value={editedComment}
               on:input={(e) => updateComment(e.target.value)}
+              on:keydown={(e) => e.key === 'Escape' && handleClose()}
               placeholder="Enter comment"
               rows="4"
             ></textarea>
