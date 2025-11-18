@@ -253,12 +253,12 @@
   }
 
   .rate-color.selected {
-    border-color: #d7baff;
+    border-color: #ffffff;
     border-width: 2px;
   }
 
   .rate-color:hover {
-    border-color: #d7baff;
+    border-color: #ffffff;
     border-width: 2px;
   }
 
