@@ -68,8 +68,8 @@
       "title": "General",
       "comment": "",
       "groups": [
-        { "id": "g_general_giving", "label": "Giving" },
-        { "id": "g_general_receiving", "label": "Receiving" }
+        { "id": "g_general_giving", "label": "Actor" },
+        { "id": "g_general_receiving", "label": "Subject" }
       ],
       "questions": [
         { "id": "q_general_romance_affection", "title": "Romance / Affection", "comment": "", "answers": [] },
@@ -90,8 +90,8 @@
       "title": "Ass play",
       "comment": "",
       "groups": [
-        { "id": "g_ass_play_giving", "label": "Giving" },
-        { "id": "g_ass_play_receiving", "label": "Receiving" }
+        { "id": "g_ass_play_giving", "label": "Self" },
+        { "id": "g_ass_play_receiving", "label": "Partner" }
       ],
       "questions": [
         { "id": "q_ass_play_anal_toys", "title": "Anal toys", "comment": "", "answers": [] },
@@ -143,7 +143,7 @@
         { "id": "g_domination_submissive", "label": "Submissive" }
       ],
       "questions": [
-        { "id": "q_domination_ds", "title": "Dominant / Submissive", "comment": "", "answers": [] },
+        { "id": "q_domination_ds", "title": "Domination", "comment": "", "answers": [] },
         { "id": "q_domination_domestic_servitude", "title": "Domestic servitude", "comment": "", "answers": [] },
         { "id": "q_domination_slavery", "title": "Slavery", "comment": "", "answers": [] },
         { "id": "q_domination_pet_play", "title": "Pet play", "comment": "", "answers": [] },
@@ -151,7 +151,6 @@
         { "id": "q_domination_discipline", "title": "Discipline", "comment": "", "answers": [] },
         { "id": "q_domination_begging", "title": "Begging", "comment": "", "answers": [] },
         { "id": "q_domination_orgasm_control", "title": "Orgasm control", "comment": "", "answers": [] },
-        { "id": "q_domination_orgasm_denial", "title": "Orgasm denial", "comment": "", "answers": [] },
         { "id": "q_domination_power_exchange", "title": "Power exchange", "comment": "", "answers": [] }
       ]
     },
@@ -228,8 +227,8 @@
       "title": "Degradation",
       "comment": "",
       "groups": [
-        { "id": "g_degradation_giving", "label": "Giving" },
-        { "id": "g_degradation_receiving", "label": "Receiving" }
+        { "id": "g_degradation_giving", "label": "Dominant" },
+        { "id": "g_degradation_receiving", "label": "Submissive" }
       ],
       "questions": [
         { "id": "q_degradation_glory_hole", "title": "Glory hole", "comment": "", "answers": [] },
@@ -254,7 +253,7 @@
         { "id": "q_touch_sensation_play", "title": "Sensation play", "comment": "", "answers": [] },
         { "id": "q_touch_electro_stimulation", "title": "Electro stimulation", "comment": "", "answers": [] },
         { "id": "q_misc_fireplay", "title": "Fire play", "comment": "", "answers": [] },
-        { "id": "q_misc_kniferoplay", "title": "Knife play (without cutting)", "comment": "", "answers": [] }
+        { "id": "q_misc_kniferoplay", "title": "Knife play (without blood)", "comment": "", "answers": [] }
 
       ]
     },
@@ -263,8 +262,8 @@
       "title": "Misc. Fetish",
       "comment": "",
       "groups": [
-        { "id": "g_misc_giving", "label": "Giving" },
-        { "id": "g_misc_receiving", "label": "Receiving" }
+        { "id": "g_misc_giving", "label": "Actor" },
+        { "id": "g_misc_receiving", "label": "Subject" }
       ],
       "questions": [
         { "id": "q_misc_fisting", "title": "Fisting", "comment": "", "answers": [] },
@@ -288,7 +287,6 @@
         { "id": "q_pain_light_pain", "title": "Light pain", "comment": "", "answers": [] },
         { "id": "q_pain_heavy_pain", "title": "Heavy pain", "comment": "", "answers": [] },
         { "id": "q_pain_nipple_clamps", "title": "Nipple clamps", "comment": "", "answers": [] },
-        { "id": "q_pain_clothes_pins", "title": "Clothes pins", "comment": "", "answers": [] },
         { "id": "q_pain_caning", "title": "Caning", "comment": "", "answers": [] },
         { "id": "q_pain_flogging", "title": "Flogging", "comment": "", "answers": [] },
         { "id": "q_pain_beating", "title": "Beating", "comment": "", "answers": [] },
