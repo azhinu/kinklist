@@ -6,6 +6,7 @@
   import EditRatingsModal from './lib/EditRatingsModal.svelte';
   import EditBlockModal from './lib/EditBlockModal.svelte';
   import ShareLinkModal from './lib/ShareLinkModal.svelte';
+  import WelcomeModal from './lib/WelcomeModal.svelte';
   import './styles.css';
 
   let kinkList = null;
@@ -18,6 +19,7 @@
   let editingBlockIndex = -1;
   let showShareModal = false;
   let shareLink = '';
+  let showWelcomeModal = false;
 
   // Extract UUID from URL path
   function getUUIDFromPath() {
@@ -36,6 +38,14 @@
   }
 
   onMount(async () => {
+    // Check if this is the first visit
+    if (typeof window !== 'undefined') {
+      const hasSeenWelcome = localStorage.getItem('kinklist_welcome_seen');
+      if (!hasSeenWelcome) {
+        showWelcomeModal = true;
+      }
+    }
+
     try {
       const uuid = getUUIDFromPath();
       if (uuid) {
@@ -161,6 +171,13 @@
       kinkList.blocks = kinkList.blocks.map((b, i) => i === editingBlockIndex ? event.detail : b);
     }
   }
+
+  function closeWelcomeModal() {
+    showWelcomeModal = false;
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('kinklist_welcome_seen', 'true');
+    }
+  }
 </script>
 
 <div class="main">
@@ -247,6 +264,12 @@
       on:close={closeShareModal}
     />
   {/if}
+
+  <!-- Welcome Modal -->
+  <WelcomeModal
+    open={showWelcomeModal}
+    on:close={closeWelcomeModal}
+  />
 </div>
 
 <style>
