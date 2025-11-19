@@ -79,7 +79,14 @@
               class="comment-text"
               value={editedComment}
               on:input={(e) => updateComment(e.target.value)}
-              on:keydown={(e) => e.key === 'Escape' && handleClose()}
+              on:keydown={(e) => {
+                if (e.key === 'Escape') {
+                  handleClose();
+                } else if (e.key === 'Enter' && e.shiftKey) {
+                  e.preventDefault();
+                  handleSave();
+                }
+              }}
               placeholder="Enter comment"
               rows="4"
             ></textarea>
