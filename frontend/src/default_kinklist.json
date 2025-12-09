@@ -19,6 +19,7 @@
       ],
       "questions": [
         { "id": "q_bodies_skinny", "title": "Skinny", "comment": "", "answers": [] },
+        { "id": "q_bodies_average", "title": "Average", "comment": "", "answers": [] },
         { "id": "q_bodies_chubby", "title": "Chubby", "comment": "", "answers": [] },
         { "id": "q_bodies_small_breasts", "title": "Small breasts", "comment": "", "answers": [] },
         { "id": "q_bodies_large_breasts", "title": "Large breasts", "comment": "", "answers": [] },
@@ -79,7 +80,7 @@
         { "id": "q_general_swallowing", "title": "Swallowing", "comment": "", "answers": [] },
         { "id": "q_general_facials", "title": "Facials", "comment": "", "answers": [] },
         { "id": "q_general_cunnilingus", "title": "Cunnilingus", "comment": "", "answers": [] },
-        { "id": "q_general_face_sitting", "title": "Face-sitting", "comment": "", "answers": [] },
+        { "id": "q_general_`face`_sitting", "title": "Face-sitting", "comment": "", "answers": [] },
         { "id": "q_general_edging", "title": "Edging", "comment": "", "answers": [] },
         { "id": "q_general_teasing", "title": "Teasing", "comment": "", "answers": [] },
         { "id": "q_general_joi_si", "title": "JOI, SI", "comment": "", "answers": [] }
@@ -90,8 +91,8 @@
       "title": "Ass play",
       "comment": "",
       "groups": [
-        { "id": "g_ass_play_giving", "label": "Self" },
-        { "id": "g_ass_play_receiving", "label": "Partner" }
+        { "id": "g_ass_play_giving", "label": "Giving" },
+        { "id": "g_ass_play_receiving", "label": "Receiving" }
       ],
       "questions": [
         { "id": "q_ass_play_anal_toys", "title": "Anal toys", "comment": "", "answers": [] },
@@ -291,6 +292,7 @@
         { "id": "q_pain_flogging", "title": "Flogging", "comment": "", "answers": [] },
         { "id": "q_pain_beating", "title": "Beating", "comment": "", "answers": [] },
         { "id": "q_pain_spanking", "title": "Spanking", "comment": "", "answers": [] },
+        { "id": "q_pain_face_slapping", "title": "Face slapping", "comment": "", "answers": [] },
         { "id": "q_pain_cock_pussy_slapping", "title": "Cock/Pussy slapping", "comment": "", "answers": [] },
         { "id": "q_pain_cock_pussy_torture", "title": "Cock/Pussy torture", "comment": "", "answers": [] },
         { "id": "q_pain_hot_wax", "title": "Hot Wax", "comment": "", "answers": [] },
